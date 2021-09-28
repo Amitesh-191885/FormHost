@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Delivery | Order | Form</title>
+  <link rel="shortcut icon" href="http://codeskulptor-demos.commondatastorage.googleapis.com/descent/lamp.png" type="image/gif">
+
+  <style>
+    /* Style for different tags, id, and class */
+
+    header{
+      padding:25px;
+      border-radius: 10px;
+      background-color: rgb(129, 224, 220);
+    }
+
+    header h1{
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 30px;
+      color: goldenrod;
+    }
+    header p{
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20px;
+      color: rgb(41, 40, 38);
+    }
+    @keyframes ChangeColor {
+      0% {color: rgb(255, 0, 0);}
+      25% {color: rgb(68, 93, 202);}
+      50% {color: rgb(68, 202, 97);}
+      100% {color: rgb(224, 98, 60);}
+    }
+    
+    nav{
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #333;
+    }
+
+    #FormH2{
+      width: 100px;
+      height: 30px;
+      color: black;
+      border: 1px solid #333;
+      border-radius: 10px;
+    }
+/* Id = "Ancher" Style written below */
+    #Ancher{
+      text-decoration: none;
+      padding: 10px;
+      text-align: center;
+      float: left;
+      color: rgb(193, 134, 248);
+    }
+    nav p{
+      text-align: right;
+      color: cornflowerblue;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      animation-name: ChangeColor;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+
+    footer{
+      border-radius: 5px;
+      background-color: rgb(148, 198, 245);overflow: hidden;
+    }
+
+    .Food{
+      width: 33%;
+      padding-left: 33%;
+      color: chocolate;
+    }
+    .Contact{
+      width: 33%;
+      padding-left: 33%;
+      color: rgb(81, 156, 241);
+    }
+
+    .contactLable{
+      color: peru;
+    }
+
+  </style>
+
+  <script>
+    //Here Scricpts
+    function form_validate(){
+      valid = true;
+
+      if(document.Delivery.first_name.value == ""){
+        alert("Please fill the form.");
+        valid = false;
+      }
+      
+      return valid;
+    }
+
+    
+  function focusFunction() {
+    document.getElementById("candidateName").style.background = "yellow";
+  }
+  
+  function blurFunction() {
+    document.getElementById("candidateName").style.background = "red";
+  }
+
+  function focusFunction2() {
+    document.getElementById("LastName").style.background = "yellow";
+  }
+  
+  function blurFunction2() {
+    document.getElementById("LastName").style.background = "red";
+  }
+
+  function Checksummary(){
+    //Under progress.
+  }
+  </script>
+</head>
+<body style="background-color: rgb(248, 248, 242);">
+  <!--Here Body starts-->
+  <header>
+    <h1>Food Production House</h1>
+    <p>Eat daily fresh food</p>
+  </header>
+  <nav>
+    <a id="Ancher" href="#">Home</a>
+    <a id="Ancher" href="#">Order</a>
+    <a id="Ancher" href="#">Offers</a>
+    <a id="Ancher" href="#">More</a>
+    <p><strong>Order daily win daily</strong></p>
+  </nav>
+
+  <main>
+    <!--Form body-->
+    <form name="Delivery" onsubmit="return form_validate()">
+      <div class="Food">
+        <h2 id="FormH2">Fruits</h2>
+        <input type="checkbox" name="Fruits" value="Apple">Apple
+        <input type="number" name="quantity" min="1" max="10" placeholder="Quantity"> <br>
+        <input type="checkbox" name="Fruits" value="Apple">Banana 
+        <input type="number" name="quantity" min="1" max="10" placeholder="Quantity"> <br>
+        <input type="checkbox" name="Fruits" value="Apple">Grapes <input type="number" name="quantity" min="1" max="10" placeholder="Quantity"> <br>
+        <input type="checkbox" name="Fruits" value="Apple">Mango 
+        <input type="number" name="quantity" min="1" max="10" placeholder="Quantity"> <br>
+        <input type="checkbox" name="Fruits" value="Apple">Peach <input type="number" name="quantity" min="1" max="10" placeholder="Quantity"> <br>
+
+      </div>
+      <div>
+        <h2 id="FormH2">Name</h2>
+        <input id="candidateName" type="text" name="first_name" onblur="blurFunction()" onfocus="focusFunction()" placeholder="First Name" required>
+        <label class="firstlable">first Name *</label><br>
+        <input id="LastName" type="text" name="last_name" onblur="blurFunction2()" onfocus="focusFunction2()" placeholder="Last Name" required>
+        <label class="lastlable">last Name *</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+      </div>
+
+      <div class="Contact">
+        <h2 id="FormH2">Contact</h2>
+        <input type="tel" id="phone" name="phone" placeholder="xxx-xxxx-xxx" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}">
+        <label for="phone" id="promtphone" >Enter a phone number:</label> <br>
+        <input id="Email" type="email" name="Email" placeholder="xyz@gmil.com" required>
+        <label class="contactLable"> Email* </label><br>
+        <input id="address" type="text" name="Address" placeholder="Your Address" required>
+        <label class="contactLable">Billing Address*</label><br>
+        <input id="code" type="number" name="area_code" placeholder="Pin Code" required>
+        <label class="contactLable">Postal Code*</label>
+      </div>
+
+      <div>
+        <h2 id="FormH2">Password</h2>
+        <input id="pass1" type="password" name="pass1" ><br>
+        <input id="pass2" type="password" name="pass2" >
+      </div>
+      <input type="submit" name="valid" value="sendDetail">
+      <button onclick="return form_validate()">click</button>
+    </form>
+    <p id="OrderConform"></p>
+    <br>
+    <br>
+    <img style="width: 100%; height: 50%; border-radius: 10px;" src="http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/back04.jpg" alt="earth">
+  </main>
+  <footer>
+    <a id="Ancher" href="#">Contact |</a>
+    <a id="Ancher" href="#">Terms |</a>
+    <a id="Ancher" href="#">Privacy Policy |</a>
+    <a id="Ancher" href="#">&copy; 2021  Food Production House</a>
+  </footer>
+</body>
+</html>
