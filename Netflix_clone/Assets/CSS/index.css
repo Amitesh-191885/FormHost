@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color: black;
+}
+/*navbar */
+.contaiter .head{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 56px;
+    z-index: 9;
+}
+/* navbar logo */
+.contaiter .head img{
+    width: 14%;
+}
+
+/* Language box */
+.selectlang{
+    /* border: 2px solid red; */
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 13vh;
+    height: 5vh;
+    position: absolute;
+    z-index: 10;
+    top: 37px;
+    right: 175px;
+    
+    justify-content: center;
+    align-items: center;
+    /* left: 100px; */
+}
+
+.selectlang #languages{
+    background-color: black;
+    text-align: center;
+    color: white;
+    z-index: 10;
+    font-size: 18px;
+    width: 100px;
+    height: 35px;
+}
+ /* sign in */
+.contaiter .head a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(228, 8, 19);
+    padding: 8px 18px;
+    border-radius: 5px;
+}
+/* Home screen */
+.home{
+    width: 100%;
+    height: 752px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    background: linear-gradient(to bottom, black, transparent);
+}
+
+.home::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    background: linear-gradient(to top, black, transparent);
+}
+.home .fit{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+/* home content box */
+.home .cntbox{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+}
+.home .cntbox .heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.home .cntbox .heading h2{
+    letter-spacing: 1.5px;
+    font-size: 60px;
+    color: white;
+    width: 85%;
+}
+
+.home .cntbox .heading h5{
+    font-size: 1.625rem;
+    font-weight: 400;
+    color: white;
+    padding: 1rem 0;
+}
+.home .cntbox .heading p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    padding: 15px 0;
+    padding-bottom: 20px;
+}
+.home .cntbox .SearchBox{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.home .cntbox .SearchBox input{
+    outline: none;
+    align-items: center;
+    border: 1px solid rgb(0, 162, 255);
+    border-radius: 4px;
+    font-size: 16px;
+    color: black;
+    padding: 0px 10px 0;
+    min-width: 500px;
+    height: 70px;
+}
+
+.home .cntbox .SearchBox a{
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
+    text-decoration: none;
+    letter-spacing: 0.1px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    line-height: 70px;
+    background: rgb(228, 8, 19);
+    min-width: 250px;
+    padding: 0 30px;
+}
+
+.bar{
+    /* border: 2px solid red; */
+    background-color: rgb(34, 34, 34);
+    width: 100%;
+    height: 8px;
+}
+
+.firstbox{
+    /* border: 2px solid red; */
+    padding: 60px 45px;
+    /* height: 300px; */
+    position: relative;
+    border-bottom: 8px solid rgb(34, 34, 34);
+    margin-bottom: 0;
+}
+
+.cntent{
+    /* border: 3px solid greenyellow; */
+    margin: 0 auto;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cntent .cntimg{
+    /* border: 2px solid white; */
+    width: 48%;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.cntent .cntimg .cntphoto{
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.cntent .cntimg .cntphoto img{
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+.cnttext{
+    /* border: 2px solid red; */
+    display: block;
+    color: white;
+    margin: -5% 0;
+    width: 52%;
+    height: 100%;
+    font-weight: 400;
+    font-size: 1.225rem;
+    padding: 0 3rem 0 0;
+    z-index: 8;
+}
+
+.cntent .cnttext h1{
+    font-size: 50px;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.cntent .cnttext h2{
+    font-size: 1.52rem;
+    font-weight: 400;
+    margin: 0.75em 0 0.25em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.last_image{
+    left: 50%;
+    width: 200px;
+    height: 200px;
+}
