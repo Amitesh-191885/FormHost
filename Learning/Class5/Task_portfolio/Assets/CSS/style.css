@@ -142,6 +142,7 @@ div.middle-container{
 .btn,a{
   font-family: 'Montserrat', sans-serif;
   /* border: solid rgb(111, 214, 254) 2px; */
+  position: relative;
   border-radius: 10px;
   padding: 10px;
   background-color: #66BFBF;

@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Food Delivery | Order | Form</title>
+  <!-- <link rel="stylesheet" href="./food.css"> -->
   <link rel="shortcut icon" href="http://codeskulptor-demos.commondatastorage.googleapis.com/descent/lamp.png" type="image/gif">
 
   <style>
@@ -71,16 +72,29 @@
     }
 
     .Food{
-      width: 33%;
-      padding-left: 33%;
+      width: max-content;
+      margin: 10px auto;
+      /* padding-left: 33%; */
       color: chocolate;
+      /* text-align: center; */
     }
     .Contact{
-      width: 33%;
-      padding-left: 33%;
+      width: max-content;
+      /* text-align: center; */
+      padding-left: 40px;
+      margin: 10px auto;
       color: rgb(81, 156, 241);
     }
 
+    .name{
+      width: max-content;
+      margin: 10px auto;
+    }
+
+    .pass{
+      width: max-content;
+      margin: 10px auto;
+    }
     .contactLable{
       color: peru;
     }
@@ -151,7 +165,8 @@
         <input type="checkbox" name="Fruits" value="Apple">Peach <input type="number" name="quantity" min="1" max="10" placeholder="Quantity"> <br>
 
       </div>
-      <div>
+
+      <div class="name">
         <h2 id="FormH2">Name</h2>
         <input id="candidateName" type="text" name="first_name" onblur="blurFunction()" onfocus="focusFunction()" placeholder="First Name" required>
         <label class="firstlable">first Name *</label><br>
@@ -177,13 +192,14 @@
         <label class="contactLable">Postal Code*</label>
       </div>
 
-      <div>
+      <div class="pass">
         <h2 id="FormH2">Password</h2>
         <input id="pass1" type="password" name="pass1" ><br>
         <input id="pass2" type="password" name="pass2" >
+        <br>
+        <input type="submit" name="valid" value="sendDetail">
+        <button onclick="return form_validate()">click</button>
       </div>
-      <input type="submit" name="valid" value="sendDetail">
-      <button onclick="return form_validate()">click</button>
     </form>
     <p id="OrderConform"></p>
     <br>
@@ -196,5 +212,6 @@
     <a id="Ancher" href="#">Privacy Policy |</a>
     <a id="Ancher" href="#">&copy; 2021  Food Production House</a>
   </footer>
+  <!-- <script src="./food.js"></script> -->
 </body>
 </html>
